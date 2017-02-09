@@ -1,7 +1,7 @@
 package modelo;
 
 import java.sql.*;
-import controlador.*;
+
 
 public class Carga_Secciones {
 
@@ -19,14 +19,10 @@ public class Carga_Secciones {
 			
 			Statement secciones = accesoBBDD.createStatement();
 			rs=secciones.executeQuery("SELECT DISTINCT SECCION FROM PRODUCTOS");
-			
-			while(rs.next()){
-				
-				mi_producto= new Productos();
-				mi_producto.setSeccion(rs.getString(1));
-				return mi_producto.getSeccion();
-			}
-				rs.close();
+			mi_producto= new Productos();
+			mi_producto.setSeccion(rs.getString(1));
+     		rs.close();
+     		
 		} catch (Exception e) {
 			
 		}
