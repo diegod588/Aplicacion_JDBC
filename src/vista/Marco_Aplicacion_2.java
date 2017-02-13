@@ -28,12 +28,12 @@ public Marco_Aplicacion_2(){
 		add(resultado, BorderLayout.CENTER);
 		JButton botonConsulta=new JButton("Consulta");
 		add(botonConsulta, BorderLayout.SOUTH);
-		addWindowListener(new Controlador_Carga_Secciones(this));
+		addWindowListener(new Controlador_Carga_Menu(this));
 	
    }
 
 		public JComboBox secciones;
-		private JComboBox paises;
+		public JComboBox paises;
 		private JTextArea resultado;	
 
 }

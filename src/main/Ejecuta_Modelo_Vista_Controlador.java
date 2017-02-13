@@ -13,5 +13,5 @@ public class Ejecuta_Modelo_Vista_Controlador {
 	mi_marco.setVisible(true);// se ejecuta esta accion para que el marco sea visible
 		
 	}
-
+// SE QUEDA EN EL VIDEO 215 MINUTO 3:09
 }

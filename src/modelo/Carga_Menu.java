@@ -3,9 +3,9 @@ package modelo;
 import java.sql.*;
 
 
-public class Carga_Secciones {
+public class Carga_Menu {
 
-	public Carga_Secciones(){
+	public Carga_Menu(){
 		
 		mi_conexion= new Conexion();
 	}
@@ -18,10 +18,15 @@ public class Carga_Secciones {
 		try {
 			
 			Statement secciones = accesoBBDD.createStatement();
+			Statement pais = accesoBBDD.createStatement();
 			rs=secciones.executeQuery("SELECT DISTINCT SECCION FROM PRODUCTOS");
+			rs_2=pais.executeQuery("SELECT DISTINCT PAIS FROM PRODUCTOS");
 			mi_producto= new Productos();
 			mi_producto.setSeccion(rs.getString(1));
-     		rs.close();
+			mi_producto.setPais(rs_2.getString(1));
+			rs.close();
+			rs_2.close();
+			accesoBBDD.close();
      		
 		} catch (Exception e) {
 			
@@ -29,8 +34,9 @@ public class Carga_Secciones {
 		  return mi_producto.getSeccion();
 	}
 	
-	Conexion mi_conexion;
+	public Conexion mi_conexion;
 	public ResultSet rs;
+	public ResultSet rs_2;
 	
 	
 }
