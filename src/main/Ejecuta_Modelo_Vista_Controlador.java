@@ -1,6 +1,5 @@
 package main;
-import javax.swing.JFrame;
-
+import javax.swing.*;
 import vista.*;
 
 public class Ejecuta_Modelo_Vista_Controlador {
@@ -13,5 +12,6 @@ public class Ejecuta_Modelo_Vista_Controlador {
 	mi_marco.setVisible(true);// se ejecuta esta accion para que el marco sea visible
 		
 	}
-// SE QUEDA EN EL VIDEO 215 MINUTO 3:09
+// QUEDo en el VIDEO 216 13:44
+// QUEDA PENSAR COMO HACER CODIGO SI PONER PUBLICAS LAS VARIABLES MARCO_APLICACION_2	
 }

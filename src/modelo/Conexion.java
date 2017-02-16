@@ -19,4 +19,9 @@ public class Conexion {
 		}
 			return mi_conexion;
 	}
+
+	public PreparedStatement prepareStatement(String consulta_seccion) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
